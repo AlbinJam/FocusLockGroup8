@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/tasks2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set App Time Limits"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="20dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Name:"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/appNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="e.g., YouTube"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Package Name:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/packageNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="e.g., com.google.youtube"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Limit (minutes):"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/limitMinutesInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="e.g., 60"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"
+                android:inputType="number"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Child:"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/childSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Enable Limit:"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/enableLimitSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/saveLimitButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Save Limit"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#4CAF50" />
+
+            <Button
+                android:id="@+id/deleteLimitButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Delete Limit"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:backgroundTint="#F44336" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Limits:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp" />
+
+            <ListView
+                android:id="@+id/appLimitsList"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:divider="@android:drawable/divider_horizontal_bright"
+                android:dividerHeight="1dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
